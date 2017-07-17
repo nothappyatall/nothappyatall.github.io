@@ -34,7 +34,7 @@ function changecolor(e){
 }
 
 function downloadCanvas(link, canvasId, filename) {
-    link.href = document.getElementById(canvasId).toDataURL();
+    link.href = document.getElementById(canvasId).toDataURL("image/jpeg");
     link.download = filename;
 }
 
