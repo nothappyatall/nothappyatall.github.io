@@ -1,4 +1,3 @@
-//imagefile = "https://fortunedotcom.files.wordpress.com/2016/09/rtx2ojuq.jpg?w=900&quality=85";
 imagefile = "";
 apologytext = "";
 memotext= "";
@@ -44,7 +43,7 @@ function renderFooter(ctx){
     var qrcode = "https://nothappyatall.github.io/img/qrcode.jpeg";
     var img = new Image;
 
-    ctx.fillStyle = "#FFFFFF";
+    ctx.fillStyle = "#FCFCFC";
     ctx.fillRect(0, ctx.canvas.height, ctx.canvas.width, 80);
 
     img.src = qrcode;
