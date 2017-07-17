@@ -1,1 +1,201 @@
-Hello World
+<!DOCTYPE html>
+<!-- Template by Quackit.com -->
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>My Apologies</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/custom.css" rel="stylesheet">
+    <link href="css/jquery.simplecolorpicker.css" rel="stylesheet">
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="container">
+            <!-- Logo and responsive toggle -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">
+                	<span class="glyphicon glyphicon-fire"></span> 
+                </a>
+            </div>
+            <!-- Navbar links -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    <li>
+                        <a href="https://zhuanlan.zhihu.com/p/27897018">为什么要道歉？点这里</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+
+    <!-- Content -->
+    <div class="container">
+
+        <!-- Heading -->
+        <div class="row">
+            <div class="col-lg-12">
+                <h1 class="page-header">向罗永浩道歉
+                    <small>真诚的</small>
+                </h1>
+            </div>
+        </div>
+        <!-- /.row -->
+
+        <!-- Projects Row -->
+        <div class="row">
+            <div class="col-md-8 portfolio-item">
+<textarea id="apologytext" rows="6" class="form-control" style="min-width: 100%">
+我是Tim Cook
+罗永浩先生
+我们赚钱太多
+导致你一直没能收购苹果
+你的不体面是我造成的
+我向你道歉
+</textarea>
+<div class="row">
+  <div class="col-lg-6">
+    <div class="input-group">
+      <span class="input-group-addon">
+      Left:
+      </span>
+      <input id="maintextleft" type="text" class="form-control" aria-label="Text input with checkbox" value="20">
+    </div>
+  </div>
+  <div class="col-lg-6">
+    <div class="input-group">
+      <span class="input-group-addon">
+      Bottom:
+      </span>
+      <input id="maintextbottom" type="text" class="form-control" aria-label="Text input with radio button" value="20">
+    </div>
+  </div>
+</div>
+
+               <select class="colorpicker" name="colorpicker">
+                 <option value="#7bd148">Green</option>
+                 <option value="#a4bdfc">Blue</option>
+                 <option value="#46d6db">Turquoise</option>
+                 <option value="#7ae7bf">Light green</option>
+                 <option value="#fbd75b">Yellow</option>
+                 <option value="#ffb878">Orange</option>
+                 <option value="#ff887c">Red</option>
+                 <option value="#dc2127">Bold red</option>
+                 <option value="#dbadff">Purple</option>
+                 <option value="#e1e1e1">Gray</option>
+                 <option value="#000000">Black</option>
+                 <option value="#FFFFFF">White</option>
+               </select>
+              <div style="position:relative;">
+                <a class='btn btn-primary' href='javascript:;'>
+                  Background Image...
+                  <input type="file" id="inputimage" style='position:absolute;z-index:2;top:0;left:0;filter: alpha(opacity=0);-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";opacity:0;background-color:transparent;color:transparent;' name="file_source" size="40" >
+                </a>
+                &nbsp;
+                <span class='label label-info' id="upload-file-info"></span>
+              </div>
+              <div>
+                <a type="button" id="download1" href="#" class="btn btn-success" >Download as image</a>
+              </div>
+        
+            <div id="preview">
+              <canvas id="preview_canvas" width="700" height="800"></canvas>
+            </div> 
+            </div>
+            <div class="col-md-4 portfolio-item">
+                <textarea id="memotext" rows="6" class="form-control" style="min-width: 100%">
+罗老师，
+我想和您讨论一些这个世界的常识。
+您自己有一个想法，那叫点子，不叫产品。
+点子没有价值，谁都有一堆。
+
+产品以发布为标志。
+论文以发表为标志。
+文章以公开为标志。
+
+如果拿出一个以前想法就算独立产品，
+那么,
+您可以用一本字典，
+随机组合文字造句存起来，
+将来您就可以随便抄袭任何东西了。
+上帝早就把所有想法都给您了，对不对？
+
+钟颖的Pin早已名满天下，
+如果您和您的团队说完全不知道它，
+完全没借鉴，
+不是您团队太不专业，
+就是有很多人在说谎。
+
+搜狗团队也是如此。
+
+围观群众们，
+请支持独立开发者，
+如果你不想看到他们的作品，
+莫名其妙，
+就被上帝交给了某家公司。
+
+罗老师，请自重。
+搜狗，也请自重。
+
+---
+一个因此很不开心的
+开发者
+</textarea>
+                <div>
+                  <a type="button" id="download2" href="#" class="btn btn-success">Download as image</a>
+                </div>
+                <div id="memopreview">
+                  <canvas id="memo_canvas" width="400" height="800"></canvas>
+                </div> 
+            </div>
+        </div>
+        <!-- /.row -->
+
+        <!-- /.row -->
+
+    </div>
+    <!-- /.container -->
+	
+	<footer>
+        <div class="copyright">
+        	<div class="container">
+        		<p>Copyright &copy; Example.com 2015</p>
+        	</div>
+        </div>
+	</footer>
+
+	
+    <!-- jQuery -->
+    <script src="js/jquery-1.11.3.min.js"></script>
+    <script src="js/jquery.simplecolorpicker.js"></script>
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+
+    <script type="text/javascript" src="js/render.js"></script>
+    <script type="text/javascript">
+      onload = function () {
+        init();
+        initbind();
+        render();
+        rendermemo();
+      }
+    </script>
+</body>
+
+</html>
