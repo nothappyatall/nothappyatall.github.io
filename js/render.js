@@ -21,10 +21,10 @@ function initbind(){
     $("#memotext").keyup(setMemoText);
     $(".colorpicker").on('change', changecolor);
     $("#download1").click(function(){
-      downloadCanvas(this, 'preview_canvas', 'img.png');
+      downloadCanvas(this, 'preview_canvas', 'img.jpg');
     });
     $("#download2").click(function(){
-      downloadCanvas(this, 'memo_canvas', 'imgmemo.png');
+      downloadCanvas(this, 'memo_canvas', 'imgmemo.jpg');
     });
 }
 function changecolor(e){
