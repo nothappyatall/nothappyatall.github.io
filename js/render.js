@@ -4,6 +4,8 @@ apologytext = "";
 memotext= "";
 fontcolor="#e1e1e1";
 
+footerheight=100;
+
 function init(){
   $('select[name="colorpicker"]').simplecolorpicker('selectColor', '#7bd148');
   apologytext=$("#apologytext").val();
@@ -41,30 +43,34 @@ function downloadCanvas(link, canvasId, filename) {
 function renderFooter(ctx){
     var qrcode = "https://nothappyatall.github.io/img/qrcode.jpeg";
     var img = new Image;
+
+    ctx.fillStyle = "#FFFFFF";
+    ctx.fillRect(0, ctx.canvas.height, ctx.canvas.width, 80);
+
     img.src = qrcode;
     img.onload = function() {
 
-      var left= 2;
-      var top = ctx.canvas.height-52;
+      var left= 10;
+      var top = ctx.canvas.height-footerheight+10;
       ctx.drawImage(img, left,top);
 
       var line1 = "你也想向罗老师道歉？访问 nothappyatall.github.io"
-      var line2 = "为什么要道歉？请扫描二维码看详情";
-      ctx.font = '14px arial, sans-serif';
-      var lineheight=14;
-      ctx.fillStyle = fontcolor;
-      ctx.fillText(line1, 56, ctx.canvas.height-30);
-      ctx.fillText(line2, 56, ctx.canvas.height-12);
+      var line2 = "扫描二维码可以阅读Pin作者钟颖的原始文章。";
+      ctx.font = '18px arial, sans-serif';
+      var lineheight=27;
+      ctx.fillStyle = "#000000";
+      ctx.fillText(line1, 110, ctx.canvas.height-60);
+      ctx.fillText(line2, 110, ctx.canvas.height-30);
     };
 }
 
 function renderText(ctx){
   var textarr= apologytext.trim().split(/\n|\r/);
-  ctx.font = '30px arial, sans-serif';
-  var lineheight=34;
+  ctx.font = '40px arial, sans-serif';
+  var lineheight=54;
 
   var left= $("#maintextleft").val();;
-  var top = ctx.canvas.height - $("#maintextbottom").val()-50;
+  var top = ctx.canvas.height - $("#maintextbottom").val()-footerheight;
      
 
 
@@ -90,8 +96,8 @@ function render(){
     img.onload = function() {
       var height = img.naturalHeight;
       var width= img.naturalWidth;
-      ctx.canvas.height = height;
-      if(width < 640)
+      ctx.canvas.height = height + footerheight;
+      if(width < 700)
         ctx.canvas.width = width;
       ctx.drawImage(img, 0,0);
       renderText(ctx);
