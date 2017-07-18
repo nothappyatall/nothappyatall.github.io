@@ -17,6 +17,7 @@ function initbind(){
     $("#apologytext").keyup(setText);
     $("#maintextbottom").keyup(setTextPos);
     $("#maintextleft").keyup(setTextPos);
+    $("#fontsize").keyup(setFontSize);
 
     $("#memotext").keyup(setMemoText);
     $(".colorpicker").on('change', changecolor);
@@ -26,9 +27,9 @@ function initbind(){
     $("#download2").click(function(){
       downloadCanvas(this, 'memo_canvas', 'imgmemo.jpg');
     });
+    $('#selectbgimg').on('change', selectbgimg);
 }
 function changecolor(e){
-  console.log($(this).val());
   fontcolor=$(this).val();
   render();
 }
@@ -64,8 +65,9 @@ function renderFooter(ctx){
 
 function renderText(ctx){
   var textarr= apologytext.split(/\n|\r/);
-  ctx.font = '40px arial, sans-serif';
-  var lineheight=54;
+  var fontsize = $("#fontsize").val()+"px";
+  ctx.font = fontsize + ' arial, sans-serif';
+  var lineheight=$("#fontsize").val()*1.3;
 
   var left= $("#maintextleft").val();;
   var top = ctx.canvas.height - $("#maintextbottom").val()-footerheight;
@@ -87,7 +89,7 @@ function render(){
 
   if(imagefile != ""){
     var img = new Image;
-    if (typeof imagefile == "string" && imagefile.indexOf("http")==0)
+    if (typeof imagefile == "string" && imagefile.trim() !="")
       img.src = imagefile;
     else 
       img.src = URL.createObjectURL(imagefile);
@@ -129,10 +131,19 @@ function setbackgroundimg(e){
   $("#upload-file-info").html($(this).val());
   render();
 }
+function selectbgimg(e){
+  var name=$('#selectbgimg').val();
+  if(name!=""){
+    imagefile ="/img/"+name+".jpg";
+    render();
+  }
+}
+function setFontSize(e){
+  render();
+}
 
 function setTextPos(e){
   render();
-
 }
 
 function setText(e){

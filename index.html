@@ -78,15 +78,19 @@
   <div class="col-lg-6">
     <div class="input-group">
       <span class="input-group-addon">
-      Left:
+      字体:
       </span>
-      <input id="maintextleft" type="text" class="form-control" aria-label="Text input with checkbox" value="20">
+      <input id="fontsize" type="text" class="form-control" aria-label="Text input with checkbox" value="40">
     </div>
   </div>
   <div class="col-lg-6">
     <div class="input-group">
       <span class="input-group-addon">
-      Bottom:
+      距离左侧:
+      </span>
+      <input id="maintextleft" type="text" class="form-control" aria-label="Text input with checkbox" value="20">
+      <span class="input-group-addon">
+      距离底部:
       </span>
       <input id="maintextbottom" type="text" class="form-control" aria-label="Text input with radio button" value="20">
     </div>
@@ -109,11 +113,21 @@
                </select>
               <div style="position:relative;">
                 <a class='btn btn-primary' href='javascript:;'>
-                  Background Image...
+                 上传背景图片 
                   <input type="file" id="inputimage" style='position:absolute;z-index:2;top:0;left:0;filter: alpha(opacity=0);-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";opacity:0;background-color:transparent;color:transparent;' name="file_source" size="40" >
                 </a>
                 &nbsp;
                 <span class='label label-info' id="upload-file-info"></span>
+              </div>
+              <div>
+      <label for="sel1">选择预设图片</label>
+      <select class="form-control" id="selectbgimg">
+        <option value="">Select</option>
+        <option value="timcook">Tim Cook</option>
+        <option value="trump">Trump</option>
+        <option value="github">Github</option>
+        <option value="developer">程序员</option>
+      </select>
               </div>
               <div>
                 <a type="button" id="download1" href="#" class="btn btn-success" >Download as image</a>
