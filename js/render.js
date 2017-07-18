@@ -63,7 +63,7 @@ function renderFooter(ctx){
 }
 
 function renderText(ctx){
-  var textarr= apologytext.trim().split(/\n|\r/);
+  var textarr= apologytext.split(/\n|\r/);
   ctx.font = '40px arial, sans-serif';
   var lineheight=54;
 
