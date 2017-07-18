@@ -40,7 +40,7 @@ function downloadCanvas(link, canvasId, filename) {
 
 
 function renderFooter(ctx){
-    var qrcode = "https://nothappyatall.github.io/img/qrcode.jpeg";
+    var qrcode = "/img/qrcode.jpeg";
     var img = new Image;
     ctx.fillStyle = "#FCFCFC";
     ctx.fillRect(0,ctx.canvas.height - footerheight, ctx.canvas.width, footerheight);
